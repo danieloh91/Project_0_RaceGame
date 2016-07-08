@@ -1,0 +1,13 @@
+tr {
+  border-color: black;
+  border-style:solid;
+}
+td {
+  border: 1px solid black;
+  height: 50px;
+  width: 10px;
+  background: yellow;
+}
+.col-md-12 {
+  margin: 0 auto;
+}
