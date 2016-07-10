@@ -1,10 +1,3 @@
-// $(document).on('ready', function() {
-//   $(window).keypress(function() {
-//     $('.racecar1').animate({ "left": "+=50px" }, "slow" );
-//   });
-// });
-// // jquery animate
-
 $(document).on('ready', function(){
   visible = true;
   //hide Player 1 after submit
@@ -25,5 +18,12 @@ $(document).on('ready', function(){
     }
     visible = ! visible;
   });
-  console.log('swim!');
+  //press Z or / to make nemo or dori move to the right
+  $("html").keypress(function(event){
+    if (event.keyCode === 122) {
+      $('.swimOne').animate({"margin-left": "+=50px" }, "fast" );
+    } else if (event.keyCode === 47) {
+      $('.swimTwo').animate({"margin-left": "+=50px" }, "fast" );
+    }
+  });
 });
