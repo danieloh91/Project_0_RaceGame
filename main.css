@@ -1,13 +1,25 @@
-tr {
-  border-color: black;
-  border-style:solid;
+body{
+  background: rgba(0, 100, 255, 0.7);
 }
-td {
-  border: 1px solid black;
-  height: 50px;
-  width: 10px;
-  background: yellow;
+
+.nemo {
+  height: 100px;
+  width: 150px;
+  margin-top: 5px;
 }
-.col-md-12 {
-  margin: 0 auto;
+
+.dori {
+  height: 100px;
+  width: 150px;
+  margin-top: 5px;
+}
+
+.lane{
+  height: 110px;
+  width: 110px;
+}
+
+.col-md-10{
+  background: rgba(0, 100, 255, 0);
+  border: 1px solid green;
 }
