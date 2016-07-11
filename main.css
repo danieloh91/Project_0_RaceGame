@@ -1,35 +1,30 @@
-body{
-  background: rgba(0, 100, 255, 0.7);
-}
-
-/*#map {
-  height: 700px;
-  margin-top: 20px;
-  width: auto;
+h1 {
   position: relative;
   z-index: 1;
+  color: rgb(100, 200, 150);
+  padding-top: 40px;
+  text-align: center;
+  width: 100%;
 }
 
-.board {
+.coralReef {
   position: absolute;
-  z-index: 5;
-  opacity: 0.9;
-}*/
-
-/*p {
-  text: 50px bold;
-}*/
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
 
 .nemo {
+  position: absolute;
   height: 100px;
   width: 150px;
-  margin-top: 5px;
+  z-index: 2;
 }
 
 .dori {
   height: 100px;
   width: 150px;
-  margin-top: 5px;
+  z-index: 2;
 }
 
 .lane{
@@ -37,18 +32,26 @@ body{
   width: 1000px;
 }
 
+.finish{
+  position: absolute;
+  right: 0px;
+  height: 100px;
+  padding-top: 10px;
+  z-index: 1;
+}
+
 .col-md-10{
   position: relative;
-  background: rgba(0, 100, 255, 0);
-  border: 1px solid green;
   z-index: 1;
+  padding-top: 100px;
+  border: 1px solid black;
 }
 
 .col-md-12{
   position: absolute;
-  background: rgba(0, 100, 255, 0.5);
+  background: rgba(0, 100, 255, 0.3);
   z-index: 2;
   text-align: center;
   padding-top: 160px;
-  height: 400px;
+  height: 450px;
 }
