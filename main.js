@@ -1,22 +1,25 @@
 $(document).on('ready', function(){
   visible = true;
-  //hide Player 1 after submit
-  $(".button1").click(function(){
+  //choose 1 or 2 players
+  $(".select1Player").click(function(){
     if (visible) {
-      $(".player1").slideUp('slow',function(){
-        $(".player1").addClass('hide').slideDown(0);
+      $(".choosePlayers").slideUp('slow',function(){
+        $(".choosePlayers").addClass('hide').slideDown(0);
       });
     }
     visible = ! visible;
+    $('.fishes').show(500).slideDown(100);
+    $('.swimTwo').animate({"margin-left": "+=90%"}, 9900);
   });
-  //hide Player 2 after submit
-  $(".button2").click(function(){
+  $(".select2Player").click(function(){
     if (visible) {
-      $(".player2").slideUp('fast',function(){
-        $(".player2").addClass('hide').slideDown(0);
+      $(".choosePlayers").slideUp('slow',function(){
+        $(".choosePlayers").addClass('hide').slideDown(0);
       });
     }
     visible = ! visible;
+    $('.fishes').show(500).slideDown(100);
+
   });
 
   var dori = new Fish();
@@ -29,9 +32,9 @@ $(document).on('ready', function(){
       nemo.name = 'Nemo';
       nemo.lap();
       if(nemo.stroke===5) {
-        $('.winPopUp').show(100).append('<p>Congrats!<br>' + nemo.name + ' wins!</p>');
-        $('.swimOne').clearQueue();
+        $('.winPopUp').show(100).append('<h2>Congrats!<br>' + nemo.name + ' wins!</h2>');
         $('.swimOne').stop();
+        $('.swimTwo').stop();
       }
     } else if (event.keyCode === 47) {
       $('.swimTwo').animate({"margin-left": "+=4%"}, "fast" );
@@ -39,8 +42,7 @@ $(document).on('ready', function(){
       dori.lap();
       if(dori.stroke===5) {
         $('.winPopUp').show(100).append('<p>Congrats!<br>' + dori.name + ' wins!</p>');
-        $('.swimTwo').clearQueue();
-        $('.swimTwo').stop();
+        $('.swimOne').stop();
       }
     }
   });

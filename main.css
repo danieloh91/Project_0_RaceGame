@@ -7,6 +7,17 @@ h1 {
   width: 100%;
 }
 
+h2 {
+  color: rgb(200, 100, 150);
+}
+
+.choosePlayers {
+  padding-top: 300px;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+}
+
 .coralReef {
   position: absolute;
   height: 100%;
@@ -22,6 +33,7 @@ h1 {
 }
 
 .dori {
+  position: absolute;
   height: 100px;
   width: 150px;
   z-index: 2;
@@ -44,10 +56,9 @@ h1 {
   position: relative;
   z-index: 1;
   padding-top: 100px;
-  border: 1px solid black;
 }
 
-.col-md-12{
+.winPopUp{
   position: absolute;
   background: rgba(0, 100, 255, 0.3);
   z-index: 2;
