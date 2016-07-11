@@ -12,17 +12,19 @@ $(document).on('ready', function(){
     //fishes appear after button hides
     $('.fishes').show(500).slideDown(100);
     //player 2 fish starts to move
+    var lapCount = 0;
     function doriMove() {
-      var lapCount = 0;
-      function $swimDori() {
-        $('.swimTwo').animate({"margin-left": "+=18%"}, 1000);
-        lapCount++;
-      }
       for (var i=0; i<5; i++) {
         $swimDori(i);
       }
-      $.when(lapCount=5).done(console.log('hi'));
+      // $.when(lapCount=5).done(console.log('hi'));
     }
+    function $swimDori() {
+      lapCount++;
+      alert('hi');
+      $('.swimTwo').animate({"margin-left": "+=18%"}, 1000);
+    }
+    window.setTimeout($swimDori(), [2000]);
     doriMove();
     // function botWin(){
     //     $('.winPopUp').show(100).append("<h2>Congrats!<br>" + dori.name + " wins!</h2><br><a class='btn reset' href='index.html'><strong>New Game<strong></a>");
@@ -84,7 +86,6 @@ $(document).on('ready', function(){
   $('.reset').on("click", function(){
     $('.btn').append('');
   });
-  //when someone wins, document.off('keypress') to take off all of the keypress handlers
   // setTimeout
 });
 
