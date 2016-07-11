@@ -12,18 +12,28 @@ $(document).on('ready', function(){
     //fishes appear after button hides
     $('.fishes').show(500).slideDown(100);
     //player 2 fish starts to move
-    $('.swimTwo').animate({"margin-left": "+=90%"}, 4000);
-    function botWin(){
-        $('.winPopUp').show(100).append("<h2>Congrats!<br>" + dori.name + " wins!</h2><br><a class='btn reset' href='index.html'><strong>New Game<strong></a>");
-        $('.swimOne').stop();
-        $('.swimTwo').stop();
-        $('.swimOne').clearQueue();
-        $('.swimTwo').clearQueue();
-        $("body").off('keypress');
+    function doriMove() {
+      var lapCount = 0;
+      function $swimDori() {
+        $('.swimTwo').animate({"margin-left": "+=18%"}, 1000);
+        lapCount++;
+      }
+      for (var i=0; i<5; i++) {
+        $swimDori(i);
+      }
+      $.when(lapCount=5).done(console.log('hi'));
     }
-    if($('.swimTwo').css("margin-left" === "90%")) {
-      botWin();
-    }
+    doriMove();
+    // function botWin(){
+    //     $('.winPopUp').show(100).append("<h2>Congrats!<br>" + dori.name + " wins!</h2><br><a class='btn reset' href='index.html'><strong>New Game<strong></a>");
+    //     $('.swimOne').stop();
+    //     $('.swimTwo').stop();
+    //     $('.swimOne').clearQueue();
+    //     $('.swimTwo').clearQueue();
+    //     $("body").off('keypress');
+    // }
+    // $.when(doriMove()).done(botWin());
+
     // or maybe moving a smaller increments and add a counter and when that counter reaches a certain number, alert dori wins
     // add an event listener for dori's win...need condition where dori's
     // jquery.css maybe if the element has a css width of 90 then you can alert that dori won
