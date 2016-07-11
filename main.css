@@ -11,6 +11,10 @@ h2 {
   color: rgb(200, 100, 150);
 }
 
+a {
+  color: rgb(200, 100, 150);
+}
+
 .choosePlayers {
   padding-top: 300px;
   position: absolute;
@@ -60,7 +64,7 @@ h2 {
 
 .winPopUp{
   position: absolute;
-  background: rgba(0, 100, 255, 0.3);
+  background: rgba(0, 100, 150, 0.3);
   z-index: 2;
   text-align: center;
   padding-top: 160px;

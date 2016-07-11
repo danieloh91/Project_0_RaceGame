@@ -19,7 +19,6 @@ $(document).on('ready', function(){
     }
     visible = ! visible;
     $('.fishes').show(500).slideDown(100);
-
   });
 
   var dori = new Fish();
@@ -32,7 +31,7 @@ $(document).on('ready', function(){
       nemo.name = 'Nemo';
       nemo.lap();
       if(nemo.stroke===5) {
-        $('.winPopUp').show(100).append('<h2>Congrats!<br>' + nemo.name + ' wins!</h2>');
+        $('.winPopUp').show(100).append("<h2>Congrats!<br>" + nemo.name + " wins!</h2><br><a class='btn reset' href='index.html'><strong>New Game<strong></a>");
         $('.swimOne').stop();
         $('.swimTwo').stop();
       }
@@ -41,10 +40,13 @@ $(document).on('ready', function(){
       dori.name = 'Dori';
       dori.lap();
       if(dori.stroke===5) {
-        $('.winPopUp').show(100).append('<p>Congrats!<br>' + dori.name + ' wins!</p>');
+        $('.winPopUp').show(100).append('<h2>Congrats!<br>' + dori.name + ' wins!</h2>');
         $('.swimOne').stop();
       }
     }
+  });
+  $('.reset').on("click", function(){
+    $('.btn').append('');
   });
 });
 
