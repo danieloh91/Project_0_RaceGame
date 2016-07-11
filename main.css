@@ -2,7 +2,7 @@ body{
   background: rgba(0, 100, 255, 0.7);
 }
 
-#map {
+/*#map {
   height: 700px;
   margin-top: 20px;
   width: auto;
@@ -14,13 +14,12 @@ body{
   position: absolute;
   z-index: 5;
   opacity: 0.9;
-}
+}*/
 
 .nemo {
   height: 100px;
   width: 150px;
   margin-top: 5px;
-  z-index: 6;
 }
 
 .dori {
@@ -35,6 +34,17 @@ body{
 }
 
 .col-md-10{
+  position: relative;
   background: rgba(0, 100, 255, 0);
   border: 1px solid green;
+  z-index: 1;
+}
+
+.col-md-12{
+  position: absolute;
+  background: rgba(0, 100, 255, 0.5);
+  z-index: 2;
+  text-align: center;
+  padding-top: 160px;
+  height: 400px;
 }
