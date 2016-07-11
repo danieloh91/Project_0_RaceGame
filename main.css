@@ -2,10 +2,25 @@ body{
   background: rgba(0, 100, 255, 0.7);
 }
 
+#map {
+  height: 700px;
+  margin-top: 20px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.board {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.9;
+}
+
 .nemo {
   height: 100px;
   width: 150px;
   margin-top: 5px;
+  z-index: 6;
 }
 
 .dori {
@@ -16,7 +31,7 @@ body{
 
 .lane{
   height: 110px;
-  width: 140px;
+  width: 1000px;
 }
 
 .col-md-10{
