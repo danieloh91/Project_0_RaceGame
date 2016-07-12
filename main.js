@@ -12,7 +12,7 @@ $(document).on('ready', function(){
     //fishes appear after button hides
     $('.fishes').show(500).slideDown(100);
     //player 2 fish starts to move
-    $('.swimTwo').animate({"left": "+=90%"}, 1000);
+    $('.swimTwo').animate({"margin-left": "+=90%"}, 9900);
 
     // or maybe moving a smaller increments and add a counter and when that counter reaches a certain number, alert dori wins
     // add an event listener for dori's win...need condition where dori's
